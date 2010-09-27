@@ -1,3 +1,18 @@
+README: UIViewAutoDismiss
+-------------------------
+
+In iOS4, apps are expected to remove alert views and action sheets before
+transitioning to a background state. These classes make that process
+a little less manual.
+
+As as added bonus, it makes life on the iPad a little easier too. 
+The HIG say that there is only supposed to be a single popup on-screen
+at any time. This class with automatically dismiss other instances
+when a new one is shown.
+
+Licence
+-------
+
 /*
  * Copyright 2010 Stephen Darlington
  *
@@ -14,14 +29,3 @@
  * limitations under the License.
  */
 
-// Auto-dismiss UIActionSheetAutoDismiss for iOS4+ when app goes into the background
-// Inspired by: http://stackoverflow.com/questions/3105974/dismissing-UIAlertViewAutoDismisss-when-entering-background-state
-
-#import <Foundation/Foundation.h>
-
-
-@interface UIActionSheetAutoDismiss : UIActionSheet {
-
-}
-
-@end
