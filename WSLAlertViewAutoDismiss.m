@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-#import "UIAlertViewAutoDismiss.h"
+#import "WSLAlertViewAutoDismiss.h"
 
 
-@implementation UIAlertViewAutoDismiss
+@implementation WSLAlertViewAutoDismiss
 
 - (id)initWithTitle:(NSString *)title message:(NSString *)message delegate:(id)delegate cancelButtonTitle:(NSString *)cancelButtonTitle otherButtonTitles:(NSString *)otherButtonTitles, ...  {
     

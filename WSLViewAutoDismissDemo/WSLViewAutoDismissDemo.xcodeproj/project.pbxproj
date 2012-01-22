@@ -15,8 +15,8 @@
 		C4A094F414CC3E7500C6B5BB /* WSLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A094F314CC3E7500C6B5BB /* WSLAppDelegate.m */; };
 		C4A094F714CC3E7500C6B5BB /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4A094F514CC3E7500C6B5BB /* MainStoryboard.storyboard */; };
 		C4A094FA14CC3E7500C6B5BB /* WSLMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A094F914CC3E7500C6B5BB /* WSLMainViewController.m */; };
-		C4A0950814CC3EF500C6B5BB /* UIActionSheetAutoDismiss.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A0950514CC3EF500C6B5BB /* UIActionSheetAutoDismiss.m */; settings = {COMPILER_FLAGS = ""; }; };
-		C4A0950914CC3EF500C6B5BB /* UIAlertViewAutoDismiss.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A0950714CC3EF500C6B5BB /* UIAlertViewAutoDismiss.m */; settings = {COMPILER_FLAGS = ""; }; };
+		C4A0950814CC3EF500C6B5BB /* WSLActionSheetAutoDismiss.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A0950514CC3EF500C6B5BB /* WSLActionSheetAutoDismiss.m */; settings = {COMPILER_FLAGS = ""; }; };
+		C4A0951914CC442F00C6B5BB /* WSLAlertViewAutoDismiss.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A0951814CC442F00C6B5BB /* WSLAlertViewAutoDismiss.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,10 +33,10 @@
 		C4A094F614CC3E7500C6B5BB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		C4A094F814CC3E7500C6B5BB /* WSLMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WSLMainViewController.h; sourceTree = "<group>"; };
 		C4A094F914CC3E7500C6B5BB /* WSLMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WSLMainViewController.m; sourceTree = "<group>"; };
-		C4A0950414CC3EF500C6B5BB /* UIActionSheetAutoDismiss.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIActionSheetAutoDismiss.h; path = ../UIActionSheetAutoDismiss.h; sourceTree = "<group>"; };
-		C4A0950514CC3EF500C6B5BB /* UIActionSheetAutoDismiss.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIActionSheetAutoDismiss.m; path = ../UIActionSheetAutoDismiss.m; sourceTree = "<group>"; };
-		C4A0950614CC3EF500C6B5BB /* UIAlertViewAutoDismiss.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIAlertViewAutoDismiss.h; path = ../UIAlertViewAutoDismiss.h; sourceTree = "<group>"; };
-		C4A0950714CC3EF500C6B5BB /* UIAlertViewAutoDismiss.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIAlertViewAutoDismiss.m; path = ../UIAlertViewAutoDismiss.m; sourceTree = "<group>"; };
+		C4A0950414CC3EF500C6B5BB /* WSLActionSheetAutoDismiss.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WSLActionSheetAutoDismiss.h; path = ../WSLActionSheetAutoDismiss.h; sourceTree = "<group>"; };
+		C4A0950514CC3EF500C6B5BB /* WSLActionSheetAutoDismiss.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WSLActionSheetAutoDismiss.m; path = ../WSLActionSheetAutoDismiss.m; sourceTree = "<group>"; };
+		C4A0950614CC3EF500C6B5BB /* WSLAlertViewAutoDismiss.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WSLAlertViewAutoDismiss.h; path = ../WSLAlertViewAutoDismiss.h; sourceTree = "<group>"; };
+		C4A0951814CC442F00C6B5BB /* WSLAlertViewAutoDismiss.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WSLAlertViewAutoDismiss.m; path = ../WSLAlertViewAutoDismiss.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,10 +108,10 @@
 		C4A0950314CC3E7E00C6B5BB /* WSLViewAutoDismiss */ = {
 			isa = PBXGroup;
 			children = (
-				C4A0950414CC3EF500C6B5BB /* UIActionSheetAutoDismiss.h */,
-				C4A0950514CC3EF500C6B5BB /* UIActionSheetAutoDismiss.m */,
-				C4A0950614CC3EF500C6B5BB /* UIAlertViewAutoDismiss.h */,
-				C4A0950714CC3EF500C6B5BB /* UIAlertViewAutoDismiss.m */,
+				C4A0950414CC3EF500C6B5BB /* WSLActionSheetAutoDismiss.h */,
+				C4A0950514CC3EF500C6B5BB /* WSLActionSheetAutoDismiss.m */,
+				C4A0950614CC3EF500C6B5BB /* WSLAlertViewAutoDismiss.h */,
+				C4A0951814CC442F00C6B5BB /* WSLAlertViewAutoDismiss.m */,
 			);
 			name = WSLViewAutoDismiss;
 			sourceTree = "<group>";
@@ -182,8 +182,8 @@
 				C4A094F014CC3E7500C6B5BB /* main.m in Sources */,
 				C4A094F414CC3E7500C6B5BB /* WSLAppDelegate.m in Sources */,
 				C4A094FA14CC3E7500C6B5BB /* WSLMainViewController.m in Sources */,
-				C4A0950814CC3EF500C6B5BB /* UIActionSheetAutoDismiss.m in Sources */,
-				C4A0950914CC3EF500C6B5BB /* UIAlertViewAutoDismiss.m in Sources */,
+				C4A0950814CC3EF500C6B5BB /* WSLActionSheetAutoDismiss.m in Sources */,
+				C4A0951914CC442F00C6B5BB /* WSLAlertViewAutoDismiss.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

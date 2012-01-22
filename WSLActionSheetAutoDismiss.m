@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-#import "UIActionSheetAutoDismiss.h"
+#import "WSLActionSheetAutoDismiss.h"
 
 
-@implementation UIActionSheetAutoDismiss
+@implementation WSLActionSheetAutoDismiss
 
 - (id)init {
     if (self = [super init]) {

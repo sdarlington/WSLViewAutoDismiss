@@ -20,7 +20,7 @@
 #import <Foundation/Foundation.h>
 
 
-@interface UIActionSheetAutoDismiss : UIActionSheet {
+@interface WSLActionSheetAutoDismiss : UIActionSheet {
 
 }
 

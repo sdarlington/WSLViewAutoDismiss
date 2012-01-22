@@ -7,8 +7,8 @@
 //
 
 #import "WSLMainViewController.h"
-#import "UIActionSheetAutoDismiss.h"
-#import "UIAlertViewAutoDismiss.h"
+#import "WSLActionSheetAutoDismiss.h"
+#import "WSLAlertViewAutoDismiss.h"
 
 @implementation WSLMainViewController
 
@@ -61,7 +61,7 @@
 }
 
 - (IBAction)actionSheetButton:(id)sender {
-    UIActionSheetAutoDismiss *actionSheet = [[UIActionSheetAutoDismiss alloc] initWithTitle:NSLocalizedString (@"Are you sure?", @"Are you sure?")
+    WSLActionSheetAutoDismiss *actionSheet = [[WSLActionSheetAutoDismiss alloc] initWithTitle:NSLocalizedString (@"Are you sure?", @"Are you sure?")
                                                                                    delegate:self
                                                                           cancelButtonTitle:NSLocalizedString (@"Cancel", @"Cancel")
                                                                      destructiveButtonTitle:nil
@@ -72,7 +72,7 @@
 }
 
 - (IBAction)alertViewButton:(id)sender {
-    UIAlertViewAutoDismiss* alert = [[UIAlertViewAutoDismiss alloc] initWithTitle:NSLocalizedString (@"Error", @"Error")
+    WSLAlertViewAutoDismiss* alert = [[WSLAlertViewAutoDismiss alloc] initWithTitle:NSLocalizedString (@"Error", @"Error")
                                                                           message:@"Oh dear"
                                                                          delegate:self cancelButtonTitle:NSLocalizedString (@"OK", @"OK") otherButtonTitles:nil, nil];
     [alert show];

@@ -20,7 +20,7 @@
 #import <Foundation/Foundation.h>
 
 
-@interface UIAlertViewAutoDismiss : UIAlertView {
+@interface WSLAlertViewAutoDismiss : UIAlertView {
 
 }
 
