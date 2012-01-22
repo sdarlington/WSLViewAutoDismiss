@@ -14,7 +14,7 @@ Licence
 -------
 
     /*
-     * Copyright 2010 Stephen Darlington
+     * Copyright 2010-12 Stephen Darlington, Wandle Software Limited
      *
      * Licensed under the Apache License, Version 2.0 (the "License");
      * you may not use this file except in compliance with the License.
