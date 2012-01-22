@@ -15,8 +15,8 @@
 		C4A094F414CC3E7500C6B5BB /* WSLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A094F314CC3E7500C6B5BB /* WSLAppDelegate.m */; };
 		C4A094F714CC3E7500C6B5BB /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4A094F514CC3E7500C6B5BB /* MainStoryboard.storyboard */; };
 		C4A094FA14CC3E7500C6B5BB /* WSLMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A094F914CC3E7500C6B5BB /* WSLMainViewController.m */; };
-		C4A0950814CC3EF500C6B5BB /* UIActionSheetAutoDismiss.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A0950514CC3EF500C6B5BB /* UIActionSheetAutoDismiss.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		C4A0950914CC3EF500C6B5BB /* UIAlertViewAutoDismiss.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A0950714CC3EF500C6B5BB /* UIAlertViewAutoDismiss.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C4A0950814CC3EF500C6B5BB /* UIActionSheetAutoDismiss.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A0950514CC3EF500C6B5BB /* UIActionSheetAutoDismiss.m */; settings = {COMPILER_FLAGS = ""; }; };
+		C4A0950914CC3EF500C6B5BB /* UIAlertViewAutoDismiss.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A0950714CC3EF500C6B5BB /* UIAlertViewAutoDismiss.m */; settings = {COMPILER_FLAGS = ""; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -257,6 +257,7 @@
 		C4A0950114CC3E7500C6B5BB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WSLViewAutoDismissDemo/WSLViewAutoDismissDemo-Prefix.pch";
 				INFOPLIST_FILE = "WSLViewAutoDismissDemo/WSLViewAutoDismissDemo-Info.plist";
@@ -268,6 +269,7 @@
 		C4A0950214CC3E7500C6B5BB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WSLViewAutoDismissDemo/WSLViewAutoDismissDemo-Prefix.pch";
 				INFOPLIST_FILE = "WSLViewAutoDismissDemo/WSLViewAutoDismissDemo-Info.plist";
@@ -295,6 +297,7 @@
 				C4A0950214CC3E7500C6B5BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
