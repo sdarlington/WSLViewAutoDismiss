@@ -20,8 +20,12 @@
 #import <Foundation/Foundation.h>
 
 
-@interface WSLActionSheetAutoDismiss : UIActionSheet {
+@interface WSLActionSheetAutoDismiss : UIActionSheet<UIActionSheetDelegate>
 
-}
+- (id)initWithTitle:(NSString *)title
+           action:(void(^)(NSInteger)) action
+  cancelButtonTitle:(NSString *)cancelButtonTitle
+destructiveButtonTitle:(NSString *)destructiveButtonTitle
+  otherButtonTitles:(NSString *)otherButtonTitles, ...;
 
 @end

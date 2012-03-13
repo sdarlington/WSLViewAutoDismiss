@@ -17,7 +17,9 @@
 #import "WSLActionSheetAutoDismiss.h"
 
 
-@implementation WSLActionSheetAutoDismiss
+@implementation WSLActionSheetAutoDismiss {
+    void(^delegateBlock)(NSInteger);
+}
 
 - (id)init {
     if (self = [super init]) {
@@ -41,6 +43,25 @@
     return self;
 }
 
+- (id)initWithTitle:(NSString *)title
+             action:(void(^)(NSInteger)) action
+  cancelButtonTitle:(NSString *)cancelButtonTitle
+destructiveButtonTitle:(NSString *)destructiveButtonTitle
+  otherButtonTitles:(NSString *)otherButtonTitles, ... {
+    
+    self = [super initWithTitle:title delegate:self cancelButtonTitle:cancelButtonTitle destructiveButtonTitle:destructiveButtonTitle otherButtonTitles:nil, nil];
+    if (self) {
+        delegateBlock = action; // do I need to copy?!
+        
+        va_list args;
+        va_start(args, otherButtonTitles);
+        for (NSString *anOtherButtonTitle = otherButtonTitles; anOtherButtonTitle != nil; anOtherButtonTitle = va_arg(args, NSString*)) {
+            [self addButtonWithTitle:anOtherButtonTitle];
+        }
+    }
+    return self;
+}
+
 - (void) dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
@@ -48,6 +69,12 @@
 - (void) cancelActionSheet:(id) sender {
     // We should not be here when entering back to foreground state
     [self dismissWithClickedButtonIndex:[self cancelButtonIndex] animated:NO];
+}
+
+#pragma mark - UIActionSheetDelegate
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+    delegateBlock(buttonIndex);
 }
 
 @end

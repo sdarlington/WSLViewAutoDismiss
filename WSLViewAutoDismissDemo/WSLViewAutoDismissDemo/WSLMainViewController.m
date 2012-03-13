@@ -62,10 +62,12 @@
 
 - (IBAction)actionSheetButton:(id)sender {
     WSLActionSheetAutoDismiss *actionSheet = [[WSLActionSheetAutoDismiss alloc] initWithTitle:NSLocalizedString (@"Are you sure?", @"Are you sure?")
-                                                                                   delegate:self
+                                                                                       action:^(NSInteger button){
+                                                                                           NSLog (@"Pressed button %d", button);
+                                                                                       }
                                                                           cancelButtonTitle:NSLocalizedString (@"Cancel", @"Cancel")
-                                                                     destructiveButtonTitle:nil
-                                                                          otherButtonTitles:NSLocalizedString(@"Break stuff",@"Break Stuff"), nil];
+                                                                     destructiveButtonTitle:NSLocalizedString(@"Break stuff",@"Break Stuff")
+                                                                          otherButtonTitles:nil, nil];
     actionSheet.actionSheetStyle = UIActionSheetStyleDefault;
     actionSheet.destructiveButtonIndex = 0;
     [actionSheet showInView:sender];
@@ -74,7 +76,11 @@
 - (IBAction)alertViewButton:(id)sender {
     WSLAlertViewAutoDismiss* alert = [[WSLAlertViewAutoDismiss alloc] initWithTitle:NSLocalizedString (@"Example", @"Example")
                                                                           message:@"Hello from WSLAlertViewAutoDismiss"
-                                                                         delegate:self cancelButtonTitle:NSLocalizedString (@"OK", @"OK") otherButtonTitles:nil, nil];
+                                                                             action:^(NSInteger button){
+                                                                                 NSLog (@"Pressed button %d", button);
+                                                                             }
+                                                                  cancelButtonTitle:NSLocalizedString (@"Cancel", @"Canecel")
+                                                                  otherButtonTitles:NSLocalizedString(@"OK", @"OK"), nil];
     [alert show];
 }
                                        

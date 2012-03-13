@@ -17,7 +17,9 @@
 #import "WSLAlertViewAutoDismiss.h"
 
 
-@implementation WSLAlertViewAutoDismiss
+@implementation WSLAlertViewAutoDismiss  {
+    void(^delegateBlock)(NSInteger);
+}
 
 - (id)init {
     self = [super init];
@@ -29,6 +31,26 @@
     return self;
 }
 
+- (id)initWithTitle:(NSString *)title
+            message:(NSString *)message
+             action:(void(^)(NSInteger))action
+  cancelButtonTitle:(NSString *)cancelButtonTitle
+  otherButtonTitles:(NSString *)otherButtonTitles, ...  {
+    
+    self = [super initWithTitle:title message:message delegate:self cancelButtonTitle:cancelButtonTitle otherButtonTitles:nil, nil];
+    if (self) {
+        delegateBlock = action; // do I need to copy?!
+        
+        va_list args;
+        va_start(args, otherButtonTitles);
+        for (NSString *anOtherButtonTitle = otherButtonTitles; anOtherButtonTitle != nil; anOtherButtonTitle = va_arg(args, NSString*)) {
+            [self addButtonWithTitle:anOtherButtonTitle];
+        }        
+    }
+    return self;
+}
+
+
 - (void) dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
@@ -36,6 +58,12 @@
 - (void) applicationDidEnterBackground:(id) sender {
     // We should not be here when entering back to foreground state
     [self dismissWithClickedButtonIndex:[self cancelButtonIndex] animated:NO];
+}
+
+#pragma mark - UIAlertViewDelegate
+
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    delegateBlock(buttonIndex);
 }
 
 @end

@@ -19,9 +19,12 @@
 
 #import <Foundation/Foundation.h>
 
+@interface WSLAlertViewAutoDismiss : UIAlertView<UIAlertViewDelegate>
 
-@interface WSLAlertViewAutoDismiss : UIAlertView {
-
-}
+- (id)initWithTitle:(NSString *)title
+            message:(NSString *)message
+             action:(void(^)(NSInteger))action
+  cancelButtonTitle:(NSString *)cancelButtonTitle 
+  otherButtonTitles:(NSString *)otherButtonTitles, ... ;
 
 @end
