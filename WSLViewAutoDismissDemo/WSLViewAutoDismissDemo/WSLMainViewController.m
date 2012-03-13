@@ -72,8 +72,8 @@
 }
 
 - (IBAction)alertViewButton:(id)sender {
-    WSLAlertViewAutoDismiss* alert = [[WSLAlertViewAutoDismiss alloc] initWithTitle:NSLocalizedString (@"Error", @"Error")
-                                                                          message:@"Oh dear"
+    WSLAlertViewAutoDismiss* alert = [[WSLAlertViewAutoDismiss alloc] initWithTitle:NSLocalizedString (@"Example", @"Example")
+                                                                          message:@"Hello from WSLAlertViewAutoDismiss"
                                                                          delegate:self cancelButtonTitle:NSLocalizedString (@"OK", @"OK") otherButtonTitles:nil, nil];
     [alert show];
 }
