@@ -24,6 +24,7 @@
 - (id)initWithTitle:(NSString *)title
             message:(NSString *)message
              action:(void(^)(NSInteger))action
+       cancelAction:(void(^)(void))cancel
   cancelButtonTitle:(NSString *)cancelButtonTitle 
   otherButtonTitles:(NSString *)otherButtonTitles, ... ;
 

@@ -19,6 +19,7 @@
 
 @implementation WSLAlertViewAutoDismiss  {
     void(^delegateBlock)(NSInteger);
+    void(^cancelBlock)();
 }
 
 - (id)init {
@@ -34,12 +35,14 @@
 - (id)initWithTitle:(NSString *)title
             message:(NSString *)message
              action:(void(^)(NSInteger))action
+       cancelAction:(void(^)(void))cancel
   cancelButtonTitle:(NSString *)cancelButtonTitle
   otherButtonTitles:(NSString *)otherButtonTitles, ...  {
     
     self = [super initWithTitle:title message:message delegate:self cancelButtonTitle:cancelButtonTitle otherButtonTitles:nil, nil];
     if (self) {
         delegateBlock = action; // do I need to copy?!
+        cancelBlock = cancel;
         
         va_list args;
         va_start(args, otherButtonTitles);
@@ -63,7 +66,12 @@
 #pragma mark - UIAlertViewDelegate
 
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
-    delegateBlock(buttonIndex);
+    if (buttonIndex == [alertView cancelButtonIndex]) {
+        cancelBlock();
+    }
+    else {
+        delegateBlock(buttonIndex);
+    }
 }
 
 @end
