@@ -1,0 +1,243 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C4F0968915BB1F7100473228 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4F0968815BB1F7100473228 /* Foundation.framework */; };
+		C4F0969915BB1F9C00473228 /* WSLActionSheetAutoDismiss.h in Headers */ = {isa = PBXBuildFile; fileRef = C4F0969515BB1F9C00473228 /* WSLActionSheetAutoDismiss.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C4F0969A15BB1F9C00473228 /* WSLActionSheetAutoDismiss.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F0969615BB1F9C00473228 /* WSLActionSheetAutoDismiss.m */; };
+		C4F0969B15BB1F9C00473228 /* WSLAlertViewAutoDismiss.h in Headers */ = {isa = PBXBuildFile; fileRef = C4F0969715BB1F9C00473228 /* WSLAlertViewAutoDismiss.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C4F0969C15BB1F9C00473228 /* WSLAlertViewAutoDismiss.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F0969815BB1F9C00473228 /* WSLAlertViewAutoDismiss.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C4F0968515BB1F7100473228 /* libWSLViewAutoDismiss.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libWSLViewAutoDismiss.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4F0968815BB1F7100473228 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C4F0968C15BB1F7100473228 /* WSLViewAutoDismiss-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WSLViewAutoDismiss-Prefix.pch"; sourceTree = "<group>"; };
+		C4F0969515BB1F9C00473228 /* WSLActionSheetAutoDismiss.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSLActionSheetAutoDismiss.h; sourceTree = "<group>"; };
+		C4F0969615BB1F9C00473228 /* WSLActionSheetAutoDismiss.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSLActionSheetAutoDismiss.m; sourceTree = "<group>"; };
+		C4F0969715BB1F9C00473228 /* WSLAlertViewAutoDismiss.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSLAlertViewAutoDismiss.h; sourceTree = "<group>"; };
+		C4F0969815BB1F9C00473228 /* WSLAlertViewAutoDismiss.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSLAlertViewAutoDismiss.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C4F0968215BB1F7100473228 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4F0968915BB1F7100473228 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C4F0967A15BB1F7100473228 = {
+			isa = PBXGroup;
+			children = (
+				C4F0968A15BB1F7100473228 /* WSLViewAutoDismiss */,
+				C4F0968715BB1F7100473228 /* Frameworks */,
+				C4F0968615BB1F7100473228 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C4F0968615BB1F7100473228 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C4F0968515BB1F7100473228 /* libWSLViewAutoDismiss.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C4F0968715BB1F7100473228 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C4F0968815BB1F7100473228 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C4F0968A15BB1F7100473228 /* WSLViewAutoDismiss */ = {
+			isa = PBXGroup;
+			children = (
+				C4F0969515BB1F9C00473228 /* WSLActionSheetAutoDismiss.h */,
+				C4F0969615BB1F9C00473228 /* WSLActionSheetAutoDismiss.m */,
+				C4F0969715BB1F9C00473228 /* WSLAlertViewAutoDismiss.h */,
+				C4F0969815BB1F9C00473228 /* WSLAlertViewAutoDismiss.m */,
+				C4F0968B15BB1F7100473228 /* Supporting Files */,
+			);
+			path = WSLViewAutoDismiss;
+			sourceTree = "<group>";
+		};
+		C4F0968B15BB1F7100473228 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C4F0968C15BB1F7100473228 /* WSLViewAutoDismiss-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		C4F0968315BB1F7100473228 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4F0969915BB1F9C00473228 /* WSLActionSheetAutoDismiss.h in Headers */,
+				C4F0969B15BB1F9C00473228 /* WSLAlertViewAutoDismiss.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		C4F0968415BB1F7100473228 /* WSLViewAutoDismiss */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C4F0969215BB1F7100473228 /* Build configuration list for PBXNativeTarget "WSLViewAutoDismiss" */;
+			buildPhases = (
+				C4F0968115BB1F7100473228 /* Sources */,
+				C4F0968215BB1F7100473228 /* Frameworks */,
+				C4F0968315BB1F7100473228 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WSLViewAutoDismiss;
+			productName = WSLViewAutoDismiss;
+			productReference = C4F0968515BB1F7100473228 /* libWSLViewAutoDismiss.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C4F0967C15BB1F7100473228 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = C4F0967F15BB1F7100473228 /* Build configuration list for PBXProject "WSLViewAutoDismiss" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C4F0967A15BB1F7100473228;
+			productRefGroup = C4F0968615BB1F7100473228 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C4F0968415BB1F7100473228 /* WSLViewAutoDismiss */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C4F0968115BB1F7100473228 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4F0969A15BB1F9C00473228 /* WSLActionSheetAutoDismiss.m in Sources */,
+				C4F0969C15BB1F9C00473228 /* WSLAlertViewAutoDismiss.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C4F0969015BB1F7100473228 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C4F0969115BB1F7100473228 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C4F0969315BB1F7100473228 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				DSTROOT = /tmp/WSLViewAutoDismiss.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WSLViewAutoDismiss/WSLViewAutoDismiss-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		C4F0969415BB1F7100473228 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				DSTROOT = /tmp/WSLViewAutoDismiss.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WSLViewAutoDismiss/WSLViewAutoDismiss-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C4F0967F15BB1F7100473228 /* Build configuration list for PBXProject "WSLViewAutoDismiss" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C4F0969015BB1F7100473228 /* Debug */,
+				C4F0969115BB1F7100473228 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C4F0969215BB1F7100473228 /* Build configuration list for PBXNativeTarget "WSLViewAutoDismiss" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C4F0969315BB1F7100473228 /* Debug */,
+				C4F0969415BB1F7100473228 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C4F0967C15BB1F7100473228 /* Project object */;
+}

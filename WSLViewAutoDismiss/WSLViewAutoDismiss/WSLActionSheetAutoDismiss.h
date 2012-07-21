@@ -17,7 +17,7 @@
 // Auto-dismiss UIActionSheetAutoDismiss for iOS4+ when app goes into the background
 // Inspired by: http://stackoverflow.com/questions/3105974/dismissing-UIAlertViewAutoDismisss-when-entering-background-state
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 
 @interface WSLActionSheetAutoDismiss : UIActionSheet<UIActionSheetDelegate>
