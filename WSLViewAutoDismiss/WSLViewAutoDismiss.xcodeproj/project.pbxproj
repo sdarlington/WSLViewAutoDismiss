@@ -12,6 +12,15 @@
 		C4F0969A15BB1F9C00473228 /* WSLActionSheetAutoDismiss.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F0969615BB1F9C00473228 /* WSLActionSheetAutoDismiss.m */; };
 		C4F0969B15BB1F9C00473228 /* WSLAlertViewAutoDismiss.h in Headers */ = {isa = PBXBuildFile; fileRef = C4F0969715BB1F9C00473228 /* WSLAlertViewAutoDismiss.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C4F0969C15BB1F9C00473228 /* WSLAlertViewAutoDismiss.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F0969815BB1F9C00473228 /* WSLAlertViewAutoDismiss.m */; };
+		C4F096CB15BB21B300473228 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4F096CA15BB21B300473228 /* UIKit.framework */; };
+		C4F096CC15BB21B300473228 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4F0968815BB1F7100473228 /* Foundation.framework */; };
+		C4F096CE15BB21B300473228 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4F096CD15BB21B300473228 /* CoreGraphics.framework */; };
+		C4F096D415BB21B300473228 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C4F096D215BB21B300473228 /* InfoPlist.strings */; };
+		C4F096D615BB21B300473228 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F096D515BB21B300473228 /* main.m */; };
+		C4F096DA15BB21B300473228 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F096D915BB21B300473228 /* AppDelegate.m */; };
+		C4F096DD15BB21B300473228 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4F096DB15BB21B300473228 /* MainStoryboard.storyboard */; };
+		C4F096E015BB21B300473228 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F096DF15BB21B300473228 /* MainViewController.m */; };
+		C4F096E815BB21BE00473228 /* libWSLViewAutoDismiss.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C4F0968515BB1F7100473228 /* libWSLViewAutoDismiss.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +31,18 @@
 		C4F0969615BB1F9C00473228 /* WSLActionSheetAutoDismiss.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSLActionSheetAutoDismiss.m; sourceTree = "<group>"; };
 		C4F0969715BB1F9C00473228 /* WSLAlertViewAutoDismiss.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSLAlertViewAutoDismiss.h; sourceTree = "<group>"; };
 		C4F0969815BB1F9C00473228 /* WSLAlertViewAutoDismiss.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSLAlertViewAutoDismiss.m; sourceTree = "<group>"; };
+		C4F096C815BB21B300473228 /* AutoDismissDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoDismissDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4F096CA15BB21B300473228 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C4F096CD15BB21B300473228 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C4F096D115BB21B300473228 /* AutoDismissDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AutoDismissDemo-Info.plist"; sourceTree = "<group>"; };
+		C4F096D315BB21B300473228 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C4F096D515BB21B300473228 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C4F096D715BB21B300473228 /* AutoDismissDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AutoDismissDemo-Prefix.pch"; sourceTree = "<group>"; };
+		C4F096D815BB21B300473228 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C4F096D915BB21B300473228 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C4F096DC15BB21B300473228 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		C4F096DE15BB21B300473228 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		C4F096DF15BB21B300473228 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +54,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C4F096C515BB21B300473228 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4F096E815BB21BE00473228 /* libWSLViewAutoDismiss.a in Frameworks */,
+				C4F096CB15BB21B300473228 /* UIKit.framework in Frameworks */,
+				C4F096CC15BB21B300473228 /* Foundation.framework in Frameworks */,
+				C4F096CE15BB21B300473228 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -40,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				C4F0968A15BB1F7100473228 /* WSLViewAutoDismiss */,
+				C4F096CF15BB21B300473228 /* AutoDismissDemo */,
 				C4F0968715BB1F7100473228 /* Frameworks */,
 				C4F0968615BB1F7100473228 /* Products */,
 			);
@@ -49,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				C4F0968515BB1F7100473228 /* libWSLViewAutoDismiss.a */,
+				C4F096C815BB21B300473228 /* AutoDismissDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -57,6 +91,8 @@
 			isa = PBXGroup;
 			children = (
 				C4F0968815BB1F7100473228 /* Foundation.framework */,
+				C4F096CA15BB21B300473228 /* UIKit.framework */,
+				C4F096CD15BB21B300473228 /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -77,6 +113,30 @@
 			isa = PBXGroup;
 			children = (
 				C4F0968C15BB1F7100473228 /* WSLViewAutoDismiss-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C4F096CF15BB21B300473228 /* AutoDismissDemo */ = {
+			isa = PBXGroup;
+			children = (
+				C4F096D815BB21B300473228 /* AppDelegate.h */,
+				C4F096D915BB21B300473228 /* AppDelegate.m */,
+				C4F096DB15BB21B300473228 /* MainStoryboard.storyboard */,
+				C4F096DE15BB21B300473228 /* MainViewController.h */,
+				C4F096DF15BB21B300473228 /* MainViewController.m */,
+				C4F096D015BB21B300473228 /* Supporting Files */,
+			);
+			path = AutoDismissDemo;
+			sourceTree = "<group>";
+		};
+		C4F096D015BB21B300473228 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C4F096D115BB21B300473228 /* AutoDismissDemo-Info.plist */,
+				C4F096D215BB21B300473228 /* InfoPlist.strings */,
+				C4F096D515BB21B300473228 /* main.m */,
+				C4F096D715BB21B300473228 /* AutoDismissDemo-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -113,13 +173,32 @@
 			productReference = C4F0968515BB1F7100473228 /* libWSLViewAutoDismiss.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		C4F096C715BB21B300473228 /* AutoDismissDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C4F096E615BB21B300473228 /* Build configuration list for PBXNativeTarget "AutoDismissDemo" */;
+			buildPhases = (
+				C4F096C415BB21B300473228 /* Sources */,
+				C4F096C515BB21B300473228 /* Frameworks */,
+				C4F096C615BB21B300473228 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AutoDismissDemo;
+			productName = AutoDismissDemo;
+			productReference = C4F096C815BB21B300473228 /* AutoDismissDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		C4F0967C15BB1F7100473228 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = WSL;
 				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = "Wandle Software Limited";
 			};
 			buildConfigurationList = C4F0967F15BB1F7100473228 /* Build configuration list for PBXProject "WSLViewAutoDismiss" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -134,9 +213,22 @@
 			projectRoot = "";
 			targets = (
 				C4F0968415BB1F7100473228 /* WSLViewAutoDismiss */,
+				C4F096C715BB21B300473228 /* AutoDismissDemo */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C4F096C615BB21B300473228 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4F096D415BB21B300473228 /* InfoPlist.strings in Resources */,
+				C4F096DD15BB21B300473228 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C4F0968115BB1F7100473228 /* Sources */ = {
@@ -148,7 +240,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C4F096C415BB21B300473228 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4F096D615BB21B300473228 /* main.m in Sources */,
+				C4F096DA15BB21B300473228 /* AppDelegate.m in Sources */,
+				C4F096E015BB21B300473228 /* MainViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C4F096D215BB21B300473228 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C4F096D315BB21B300473228 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C4F096DB15BB21B300473228 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C4F096DC15BB21B300473228 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		C4F0969015BB1F7100473228 /* Debug */ = {
@@ -217,6 +338,33 @@
 			};
 			name = Release;
 		};
+		C4F096E415BB21B300473228 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AutoDismissDemo/AutoDismissDemo-Prefix.pch";
+				INFOPLIST_FILE = "AutoDismissDemo/AutoDismissDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C4F096E515BB21B300473228 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AutoDismissDemo/AutoDismissDemo-Prefix.pch";
+				INFOPLIST_FILE = "AutoDismissDemo/AutoDismissDemo-Info.plist";
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -234,6 +382,15 @@
 			buildConfigurations = (
 				C4F0969315BB1F7100473228 /* Debug */,
 				C4F0969415BB1F7100473228 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C4F096E615BB21B300473228 /* Build configuration list for PBXNativeTarget "AutoDismissDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C4F096E415BB21B300473228 /* Debug */,
+				C4F096E515BB21B300473228 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
