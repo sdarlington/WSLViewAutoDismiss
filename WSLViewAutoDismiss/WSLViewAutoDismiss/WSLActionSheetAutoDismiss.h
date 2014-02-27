@@ -19,6 +19,8 @@
 
 #import <UIKit/UIKit.h>
 
+/// Notification on the iPad only when a new object is initialised -- used to dismiss other action sheets
+extern NSString* const WSLActionSheetAutoDismissLaunchedNotification;
 
 @interface WSLActionSheetAutoDismiss : UIActionSheet<UIActionSheetDelegate>
 

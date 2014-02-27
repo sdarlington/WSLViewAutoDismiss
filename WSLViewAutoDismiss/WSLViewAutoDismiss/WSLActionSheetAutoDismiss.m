@@ -17,6 +17,8 @@
 #import "WSLActionSheetAutoDismiss.h"
 
 
+NSString* const WSLActionSheetAutoDismissLaunchedNotification = @"WSLActionSheetAutoDismissLaunchedNotification";
+
 @implementation WSLActionSheetAutoDismiss
 
 - (id)init {
@@ -31,10 +33,10 @@
         }
         if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
             // Close ourselves when another UIActionSheet opens
-            [nc postNotificationName:@"UIActionSheetAutoDismissLaunched" object:self];
+            [nc postNotificationName:WSLActionSheetAutoDismissLaunchedNotification object:self];
             [nc addObserver:self
                    selector:@selector(cancelActionSheet:)
-                       name:@"UIActionSheetAutoDismissLaunched"
+                       name:WSLActionSheetAutoDismissLaunchedNotification
                      object:nil];
         }
     }
