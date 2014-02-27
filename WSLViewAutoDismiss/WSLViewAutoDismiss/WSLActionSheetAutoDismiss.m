@@ -74,7 +74,9 @@ destructiveButtonTitle:(NSString *)destructiveButtonTitle
 #pragma mark - UIActionSheetDelegate
 
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
-    delegateBlock(buttonIndex);
+    if (delegateBlock) {
+        delegateBlock(buttonIndex);
+    }
 }
 
 @end
