@@ -22,6 +22,8 @@
 
 @interface WSLActionSheetAutoDismiss : UIActionSheet<UIActionSheetDelegate>
 
+@property (nonatomic,strong) void(^actionBlock)(NSInteger);
+
 - (id)initWithTitle:(NSString *)title
            action:(void(^)(NSInteger)) action
   cancelButtonTitle:(NSString *)cancelButtonTitle

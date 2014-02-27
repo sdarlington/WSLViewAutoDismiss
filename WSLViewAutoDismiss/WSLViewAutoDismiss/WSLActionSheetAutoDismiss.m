@@ -17,9 +17,7 @@
 #import "WSLActionSheetAutoDismiss.h"
 
 
-@implementation WSLActionSheetAutoDismiss {
-    void(^delegateBlock)(NSInteger);
-}
+@implementation WSLActionSheetAutoDismiss
 
 - (id)init {
     if (self = [super init]) {
@@ -51,7 +49,7 @@ destructiveButtonTitle:(NSString *)destructiveButtonTitle
     
     self = [super initWithTitle:title delegate:self cancelButtonTitle:cancelButtonTitle destructiveButtonTitle:destructiveButtonTitle otherButtonTitles:nil, nil];
     if (self) {
-        delegateBlock = action; // do I need to copy?!
+        _actionBlock = action; // do I need to copy?!
         
         va_list args;
         va_start(args, otherButtonTitles);
@@ -74,8 +72,8 @@ destructiveButtonTitle:(NSString *)destructiveButtonTitle
 #pragma mark - UIActionSheetDelegate
 
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
-    if (delegateBlock) {
-        delegateBlock(buttonIndex);
+    if (self.actionBlock) {
+        self.actionBlock(buttonIndex);
     }
 }
 
