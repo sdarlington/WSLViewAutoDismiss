@@ -11,7 +11,7 @@ This project does exactly that automatically. As an added bonus, I also added so
 DESC
 
 s.homepage     = "https://github.com/sdarlington/WSLViewAutoDismiss"
-s.license      = { :type => "Apache License, Version 2.0", :file => "LICENSE" }
+s.license      = { :type => "Apache License, Version 2.0", :file => "LICENSE.txt" }
 s.author             = "Stephen Darlington"
 s.social_media_url = "http://twitter.com/sdarlington"
 s.platform     = :ios, '5.1'
