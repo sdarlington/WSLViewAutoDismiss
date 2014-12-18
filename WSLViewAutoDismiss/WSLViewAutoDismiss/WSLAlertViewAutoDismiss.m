@@ -19,9 +19,22 @@
 
 @implementation WSLAlertViewAutoDismiss
 
-- (id)init {
-    self = [super init];
+- (void)processVarArgsWithTitle:(NSString*)title list:(va_list)list {
+    for (NSString *buttonTitle = title; buttonTitle != nil; buttonTitle = va_arg(list, NSString*)) {
+        [self addButtonWithTitle:buttonTitle];
+    }
+}
+
+- (id)initWithTitle:(NSString *)title message:(NSString *)message delegate:(id)delegate cancelButtonTitle:(NSString *)cancelButtonTitle otherButtonTitles:(NSString *)otherButtonTitles, ... {
+    self = [super initWithTitle:title message:message delegate:delegate cancelButtonTitle:cancelButtonTitle otherButtonTitles:otherButtonTitles, nil];
     if (self) {
+        if (otherButtonTitles) {
+            va_list args;
+            va_start(args, otherButtonTitles);
+            [self processVarArgsWithTitle:otherButtonTitles list:args];
+            va_end(args);
+        }
+
         if ([[UIDevice currentDevice].systemVersion intValue] >= 4) {
             [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationDidEnterBackground:) name:UIApplicationDidEnterBackgroundNotification object:nil];
         }
@@ -36,16 +49,17 @@
   cancelButtonTitle:(NSString *)cancelButtonTitle
   otherButtonTitles:(NSString *)otherButtonTitles, ...  {
     
-    self = [super initWithTitle:title message:message delegate:self cancelButtonTitle:cancelButtonTitle otherButtonTitles:nil, nil];
+    self = [self initWithTitle:title message:message delegate:self cancelButtonTitle:cancelButtonTitle otherButtonTitles:nil, nil];
     if (self) {
-        _actionBlock = action; // do I need to copy?!
+        _actionBlock = action;
         _cancelBlock = cancel;
         
-        va_list args;
-        va_start(args, otherButtonTitles);
-        for (NSString *anOtherButtonTitle = otherButtonTitles; anOtherButtonTitle != nil; anOtherButtonTitle = va_arg(args, NSString*)) {
-            [self addButtonWithTitle:anOtherButtonTitle];
-        }        
+        if (otherButtonTitles) {
+            va_list args;
+            va_start(args, otherButtonTitles);
+            [self processVarArgsWithTitle:otherButtonTitles list:args];
+            va_end(args);
+        }
     }
     return self;
 }

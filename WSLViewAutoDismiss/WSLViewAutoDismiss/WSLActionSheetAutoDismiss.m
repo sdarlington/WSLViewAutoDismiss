@@ -21,8 +21,22 @@ NSString* const WSLActionSheetAutoDismissLaunchedNotification = @"WSLActionSheet
 
 @implementation WSLActionSheetAutoDismiss
 
-- (id)init {
-    if (self = [super init]) {
+- (void)processVaArgsWithTitle:(NSString*)title list:(va_list)list {
+    for (NSString *buttonTitle = title; buttonTitle != nil; buttonTitle = va_arg(list, NSString*)) {
+        [self addButtonWithTitle:buttonTitle];
+    }
+}
+
+- (id)initWithTitle:(NSString *)title delegate:(id<UIActionSheetDelegate>)delegate cancelButtonTitle:(NSString *)cancelButtonTitle destructiveButtonTitle:(NSString *)destructiveButtonTitle otherButtonTitles:(NSString *)otherButtonTitles, ... {
+    self = [super initWithTitle:title delegate:delegate cancelButtonTitle:cancelButtonTitle destructiveButtonTitle:destructiveButtonTitle otherButtonTitles:nil];
+    if (self) {
+        if (otherButtonTitles) {
+            va_list args;
+            va_start(args, otherButtonTitles);
+            [self processVaArgsWithTitle:otherButtonTitles list:args];
+            va_end(args);
+        }
+        
         NSNotificationCenter* nc = [NSNotificationCenter defaultCenter];
         if ([[UIDevice currentDevice].systemVersion intValue] >= 4) {
             // Close ourseleves when the app exits the foreground
@@ -49,15 +63,14 @@ NSString* const WSLActionSheetAutoDismissLaunchedNotification = @"WSLActionSheet
 destructiveButtonTitle:(NSString *)destructiveButtonTitle
   otherButtonTitles:(NSString *)otherButtonTitles, ... {
     
-    self = [super initWithTitle:title delegate:self cancelButtonTitle:cancelButtonTitle destructiveButtonTitle:destructiveButtonTitle otherButtonTitles:nil, nil];
+    self = [self initWithTitle:title delegate:self cancelButtonTitle:cancelButtonTitle destructiveButtonTitle:destructiveButtonTitle otherButtonTitles:nil, nil];
     if (self) {
-        _actionBlock = action; // do I need to copy?!
+        _actionBlock = action;
         
         va_list args;
         va_start(args, otherButtonTitles);
-        for (NSString *anOtherButtonTitle = otherButtonTitles; anOtherButtonTitle != nil; anOtherButtonTitle = va_arg(args, NSString*)) {
-            [self addButtonWithTitle:anOtherButtonTitle];
-        }
+        [self processVaArgsWithTitle:otherButtonTitles list:args];
+        va_end(args);
     }
     return self;
 }
