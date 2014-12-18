@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C416578B1A4308AD0060F6ED /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = C416578A1A4308AD0060F6ED /* README.md */; };
 		C4F0968915BB1F7100473228 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4F0968815BB1F7100473228 /* Foundation.framework */; };
 		C4F0969915BB1F9C00473228 /* WSLActionSheetAutoDismiss.h in Headers */ = {isa = PBXBuildFile; fileRef = C4F0969515BB1F9C00473228 /* WSLActionSheetAutoDismiss.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C4F0969A15BB1F9C00473228 /* WSLActionSheetAutoDismiss.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F0969615BB1F9C00473228 /* WSLActionSheetAutoDismiss.m */; };
@@ -24,8 +25,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C41657861A43059D0060F6ED /* WSLViewAutoDismiss.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = WSLViewAutoDismiss.podspec; sourceTree = "<group>"; };
-		C41657871A43059D0060F6ED /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		C41657881A4308A10060F6ED /* WSLViewAutoDismiss.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = WSLViewAutoDismiss.podspec; path = ../WSLViewAutoDismiss.podspec; sourceTree = "<group>"; };
+		C41657891A4308A10060F6ED /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE.txt; path = ../LICENSE.txt; sourceTree = "<group>"; };
+		C416578A1A4308AD0060F6ED /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		C4F0968515BB1F7100473228 /* libWSLViewAutoDismiss.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libWSLViewAutoDismiss.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4F0968815BB1F7100473228 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C4F0968C15BB1F7100473228 /* WSLViewAutoDismiss-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WSLViewAutoDismiss-Prefix.pch"; sourceTree = "<group>"; };
@@ -77,8 +79,9 @@
 				C4F096CF15BB21B300473228 /* AutoDismissDemo */,
 				C4F0968715BB1F7100473228 /* Frameworks */,
 				C4F0968615BB1F7100473228 /* Products */,
-				C41657861A43059D0060F6ED /* WSLViewAutoDismiss.podspec */,
-				C41657871A43059D0060F6ED /* LICENSE.txt */,
+				C416578A1A4308AD0060F6ED /* README.md */,
+				C41657881A4308A10060F6ED /* WSLViewAutoDismiss.podspec */,
+				C41657891A4308A10060F6ED /* LICENSE.txt */,
 			);
 			sourceTree = "<group>";
 		};
@@ -239,6 +242,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C416578B1A4308AD0060F6ED /* README.md in Sources */,
 				C4F0969A15BB1F9C00473228 /* WSLActionSheetAutoDismiss.m in Sources */,
 				C4F0969C15BB1F9C00473228 /* WSLAlertViewAutoDismiss.m in Sources */,
 			);
