@@ -48,7 +48,7 @@
     WSLActionSheetAutoDismiss* sheet = [[WSLActionSheetAutoDismiss alloc] initWithTitle:@"Test"
                                                                                  action:^(NSInteger b) {} cancelButtonTitle:@"Cancel"
                                                                  destructiveButtonTitle:@"Danger!"
-                                                                      otherButtonTitles:nil];
+                                                                      otherButtonTitles:@"Not dangerous",nil];
     [sheet showInView:self.view];
 }
 @end
