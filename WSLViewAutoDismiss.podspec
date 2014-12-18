@@ -16,6 +16,6 @@ s.author             = "Stephen Darlington"
 s.social_media_url = "http://twitter.com/sdarlington"
 s.platform     = :ios, '5.1'
 s.source       = { :git => "https://github.com/sdarlington/WSLViewAutoDismiss.git", :tag => "1.0.0" }
-s.source_files  = 'WSLViewAutoDismiss/WSLViewAutoDismiss/WSLActionSheetAutoDismiss.{h,m}', 'WSLViewAutoDismiss/WSLAlertViewAutoDismiss.{h,m}'
-s.public_header_files = 'WSLViewAutoDismiss/WSLViewAutoDismiss/WSLActionSheetAutoDismiss.h', 'WSLViewAutoDismiss/WSLViewAutoDismiss/WSLAlertViewAutoDismiss.h'
+s.source_files  = [ 'WSLViewAutoDismiss/WSLViewAutoDismiss/WSLActionSheetAutoDismiss.{h,m}', 'WSLViewAutoDismiss/WSLAlertViewAutoDismiss.{h,m}' ]
+s.public_header_files = [ 'WSLViewAutoDismiss/WSLViewAutoDismiss/WSLActionSheetAutoDismiss.h', 'WSLViewAutoDismiss/WSLViewAutoDismiss/WSLAlertViewAutoDismiss.h' ]
 end
