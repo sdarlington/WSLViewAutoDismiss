@@ -10,7 +10,10 @@
 #import "WSLActionSheetAutoDismiss.h"
 #import "WSLAlertViewAutoDismiss.h"
 
-@interface MainViewController ()
+@interface MainViewController ()<UIAlertViewDelegate,UIActionSheetDelegate>
+
+@property (strong, nonatomic) IBOutlet UISwitch *blocksSwitch;
+@property (strong, nonatomic) IBOutlet UILabel *statusLabel;
 
 @end
 
@@ -20,13 +23,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-}
-
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
+    
+    self.blocksSwitch.on = YES;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -35,20 +33,59 @@
 }
 
 - (IBAction)showAlertView:(id)sender {
-    WSLAlertViewAutoDismiss* alert = [[WSLAlertViewAutoDismiss alloc] initWithTitle:@"Test"
-                                                                            message:@"A test message"
-                                                                             action:^(NSInteger b){}
-                                                                       cancelAction:^{}
-                                                                  cancelButtonTitle:@"Cancel"
-                                                                  otherButtonTitles:@"Test", nil];
+    WSLAlertViewAutoDismiss* alert;
+    if (self.blocksSwitch.on) {
+        __weak typeof(self) weakSelf = self;
+        alert = [[WSLAlertViewAutoDismiss alloc] initWithTitle:@"Test"
+                                                       message:@"A test message"
+                                                        action:^(NSInteger b){
+                                                            weakSelf.statusLabel.text = [NSString stringWithFormat:@"Tapped: %ld", (long)b];
+                                                        }
+                                                  cancelAction:^{}
+                                             cancelButtonTitle:@"Cancel"
+                                             otherButtonTitles:@"Test", @"Test 2", @"Test 3", nil];
+    }
+    else {
+        alert = [[WSLAlertViewAutoDismiss alloc] initWithTitle:@"Test"
+                                                       message:@"A test message"
+                                                      delegate:self
+                                             cancelButtonTitle:@"Cancel"
+                                             otherButtonTitles:@"Test", @"Test 2", @"Test 3", nil];
+    }
     [alert show];
 }
 
 - (IBAction)showActionSheet:(id)sender {
-    WSLActionSheetAutoDismiss* sheet = [[WSLActionSheetAutoDismiss alloc] initWithTitle:@"Test"
-                                                                                 action:^(NSInteger b) {} cancelButtonTitle:@"Cancel"
-                                                                 destructiveButtonTitle:@"Danger!"
-                                                                      otherButtonTitles:@"Not dangerous",nil];
+    WSLActionSheetAutoDismiss* sheet;
+    if (self.blocksSwitch) {
+        __weak typeof(self) weakSelf = self;
+        sheet = [[WSLActionSheetAutoDismiss alloc] initWithTitle:@"Test"
+                                                          action:^(NSInteger b) {
+                                                              weakSelf.statusLabel.text = [NSString stringWithFormat:@"Tapped: %ld", (long)b];
+                                                          }
+                                               cancelButtonTitle:@"Cancel"
+                                          destructiveButtonTitle:@"Danger!"
+                                               otherButtonTitles:@"Not dangerous",nil];
+    }
+    else {
+        sheet = [[WSLActionSheetAutoDismiss alloc] initWithTitle:@"Test"
+                                                        delegate:self
+                                               cancelButtonTitle:@"Cancel"                                         destructiveButtonTitle:@"Danger!"
+                                               otherButtonTitles:@"Not dangerous", nil];
+    }
     [sheet showInView:self.view];
 }
+
+#pragma mark - UIAlertViewDelegate
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    self.statusLabel.text = [NSString stringWithFormat:@"Tapped: %ld", (long)buttonIndex];
+}
+
+#pragma mark - UIActionSheetDelegate
+
+-(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+    self.statusLabel.text = [NSString stringWithFormat:@"Tapped: %ld", (long)buttonIndex];
+}
+
 @end
